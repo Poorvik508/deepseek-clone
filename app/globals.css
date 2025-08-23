@@ -9,3 +9,11 @@ html{
 ::-webkit-scrollbar{
   display: none;
 }
+/* Hide the Next.js dev watermark */
+[data-nextjs-toast] {
+  display: none !important;
+}
+#__next-build-watcher,
+.nextjs-toast {
+  display: none !important;
+}
