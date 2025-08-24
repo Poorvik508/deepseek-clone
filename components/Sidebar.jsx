@@ -1,13 +1,16 @@
+'use client'
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
 import { useClerk,UserButton } from "@clerk/nextjs";
 import { useAppContext } from "@/context/AppContext";
+import ChartLable from "./ChartLable";
 
 const Sidebar = ({ expand, setExpand }) => {
   const { openSignIn } = useClerk()
-  const {user}=useAppContext()
+  const { user } = useAppContext()
+  const [openMenu,setOpenMenu]=useState({id:0,open:false})
   return (
     <div
       className={clsx(
@@ -88,7 +91,7 @@ const Sidebar = ({ expand, setExpand }) => {
           expand?"block":"hidden"
         )}>
           <p className="my-1">Recents</p>
-          {/* char lable */}
+          <ChartLable openMenu={openMenu } setOpenMenu={setOpenMenu} />
         </div>
       </div>
       <div>
