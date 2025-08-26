@@ -49,7 +49,7 @@ export default function Home() {
                 height={64}
                 className="h-16 w-16"
               />
-              <p className="text-2xl font-medium">Hi, I'm Deepseek.</p>
+              <p className="text-2xl font-medium">{"Hi, I'm Deepseek."}</p>
             </div>
             <p className="text-sm mt-2">How can I help you today?</p>
           </>
